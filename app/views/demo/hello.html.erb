@@ -1,0 +1,17 @@
+<h1>HELLO SWETHA FROM HELLO!</h1>
+<%=1+1%> <br/>
+<%name="swetha"%>
+<%="my name is #{name}"%>
+<br/>
+<% @array.each do |i| %>
+<%=i%>
+<% end %>
+<br/>
+<%= link_to("Indexpage",{:action=>"index"})%>
+<br/>
+<br/>
+ID:<%=@id%><br/>
+<!--#or-->
+ID:<%=params[:id]%><br/>
+Page:<%=@page.to_i+1%> <!---the params are always in string--><br/>
+next id:<%=params[:id].to_i+1 %>

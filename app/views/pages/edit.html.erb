@@ -1,0 +1,10 @@
+<%= link_to("back to", pages_path, :class=>"back-link")%>
+<div class="pages edit">
+	<h2>update page</h2>
+	<%= form_for(@page) do |f| %>
+    <%=render(:partial=>"form",:locals=>{:f=>f}) %>
+	<div class="submit">
+		<%= f.submit("update Subject") %>
+	</div>
+	<% end %>
+	</div>

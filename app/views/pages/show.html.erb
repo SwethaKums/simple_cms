@@ -1,0 +1,41 @@
+
+<%= link_to("back to",pages_path) %>
+<h2>Page Details </h2>
+<table class="page history">
+
+		<tr>
+			<th>Name</th>
+			<td><%=@page.name %></td>
+		</tr>
+
+		<tr>
+			<th>Position</th>
+			<td><%= @page.position %></td>
+		</tr>
+
+		<tr>
+			<th>Subject_id </th>
+			<td><%= @page.subject_id %></td>
+		</tr>
+
+		<tr>
+			<th>Permalinks </th>
+			<td><%= @page.permalinks %></td>
+		</tr>
+		
+
+		<tr>
+			<th>Visible </th>
+			<td><%= @page.visible ? 'true ': 'false' %></td>
+		</tr>
+		
+		<tr>
+			<th>Created_at</th>
+			<td><%= @page.created_at %>
+		</tr>
+
+		<tr>
+			<th>Updated_at</th>
+			<td><%= @page.updated_at %> </td>
+		</tr>
+</table>

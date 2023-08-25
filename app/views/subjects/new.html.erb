@@ -1,0 +1,11 @@
+<%= link_to("back to", subjects_path, :class=>"back-link")%>
+<div class="subjects new">
+	<h2>create subject</h2>
+	<%= form_for(@subject) do |f| %>
+
+	<%= render(:partial=>"form", :locals=>{:f=>f}) %>
+	<div class="submit">
+		<%= f.submit("Create Subject") %>
+	</div>
+	<% end %>
+	</div>

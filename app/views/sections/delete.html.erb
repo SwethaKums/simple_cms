@@ -1,0 +1,10 @@
+<%= link_to("back_to",sections_path)%>
+<h1>Delete section</h1>
+<%= form_for(@section,:method=>"delete") do |f|%>
+<h1>Are you sure you want to delete?</h1>
+<p><%= f.object.name %></p>
+<div class="submit">
+	<%= f.submit("Delete section")%>
+	</div>
+	<% end %>
+

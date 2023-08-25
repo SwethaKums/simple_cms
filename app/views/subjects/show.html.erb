@@ -1,0 +1,31 @@
+
+
+<%= link_to("back to",subjects_path) %>
+<h2>Subject Details </h2>
+<table class="subject history">
+
+		<tr>
+			<th>Name</th>
+			<td><%=@subject.name %></td>
+		</tr>
+
+		<tr>
+			<th>Position</th>
+			<td><%= @subject.position %></td>
+		</tr>
+
+		<tr>
+			<th>Visible </th>
+			<td><%= @subject.visible ? 'true ': 'false' %></td>
+		</tr>
+		
+		<tr>
+			<th>Created_at</th>
+			<td><%= @subject.created_at %>
+		</tr>
+
+		<tr>
+			<th>Updated_at</th>
+			<td><%= @subject.updated_at %> </td>
+		</tr>
+</table>

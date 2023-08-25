@@ -1,0 +1,27 @@
+    <% @page_title="All Subjects" %>
+	<div class="subjects index">
+	<h2> subject </h2>
+	<%= image_tag("plus_sign.png",:size=>'11*11' ,:alt=>"+") %>	
+	<%= link_to("Add new subject", new_subject_path, :class=>"action new")%>
+	<table class="listing" summary="subjects listing">
+		<tr class="header">
+			<th>#</th>
+			<th>Subjects</th>
+			<th>Visible</th>
+			<th>Pages</th>
+			<th>Actions</th>
+		</tr>
+		<% @subjects.each do |subject|  %>
+		<tr>
+			<td><%=subject.position %></td>
+			<td><%=subject.name %></td>	
+			<td class="center"> <%= status_tag(subject.visible) %></td>
+			<td class="center"> <%= subject.pages.size %></td>
+			<td class="actions">
+				<%= link_to("show",subject_path(subject),:class=>"action show")%>
+				<%= link_to("edit",edit_subject_path(subject),:class=>"action edit")%>
+				<%= link_to("delete",delete_subject_path(subject),:class=>"action delete")%> </td>
+             </tr>	
+             <% end %>
+         </table>
+</div>

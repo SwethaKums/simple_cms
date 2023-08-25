@@ -1,0 +1,10 @@
+<%= link_to("back_to",pages_path)%>
+<h1>Delete Page</h1>
+<%= form_for(@page,:method=>"delete") do |f|%>
+<h1>Are you sure you want to delete?</h1>
+<p><%= f.object.name %></p>
+<div class="submit">
+	<%= f.submit("Delete Page")%>
+	</div>
+	<% end %>
+
